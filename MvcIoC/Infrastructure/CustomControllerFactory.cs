@@ -13,7 +13,7 @@ namespace MvcIoC.Infrastructure
         {
             if (controllerName.ToLower().StartsWith("proteintracker"))
             {
-                var service = new ProteinTrackingService();
+                var service = new ProteinTrackingService(new ProteinRepository());
                 var controller = new ProteinTrackerController(service);
 
                 return controller;

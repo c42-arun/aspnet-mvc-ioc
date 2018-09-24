@@ -5,7 +5,7 @@ namespace MvcIoC.Controllers
 {
     public class ProteinTrackerController : Controller
     {
-        private IProteinTrackingService proteinTrackingService = new ProteinTrackingService();
+        private IProteinTrackingService proteinTrackingService;
 
         public ProteinTrackerController(IProteinTrackingService proteinTrackingService)
         {

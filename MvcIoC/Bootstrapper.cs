@@ -1,5 +1,6 @@
 using System.Web.Mvc;
 using Microsoft.Practices.Unity;
+using MvcIoC.Models;
 using Unity.Mvc4;
 
 namespace MvcIoC
@@ -30,7 +31,8 @@ namespace MvcIoC
 
     public static void RegisterTypes(IUnityContainer container)
     {
-    
+        container.RegisterType<IProteinTrackingService, ProteinTrackingService>();
+        container.RegisterType<IProteinRepository, ProteinRepository>();
     }
   }
 }

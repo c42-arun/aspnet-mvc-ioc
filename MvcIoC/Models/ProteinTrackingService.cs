@@ -4,7 +4,12 @@ namespace MvcIoC.Models
 {
     public class ProteinTrackingService : IProteinTrackingService
     {
-        private ProteinRepository repository = new ProteinRepository();
+        private IProteinRepository repository;
+
+        public ProteinTrackingService(IProteinRepository proteinRepository)
+        {
+            this.repository = proteinRepository;
+        }
 
         public int Total
         {
