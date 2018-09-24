@@ -178,6 +178,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\IProteinTrackingService.cs" />
     <Compile Include="Models\ProteinData.cs" />
     <Compile Include="Models\ProteinRepository.cs" />
     <Compile Include="Models\ProteinTrackingService.cs" />

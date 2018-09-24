@@ -1,15 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using MvcIoC.Models;
 
 namespace MvcIoC.Controllers
 {
     public class ProteinTrackerController : Controller
     {
-        private ProteinTrackingService proteinTrackingService = new ProteinTrackingService();
+        private IProteinTrackingService proteinTrackingService = new ProteinTrackingService();
+
+        public ProteinTrackerController(IProteinTrackingService proteinTrackingService)
+        {
+            this.proteinTrackingService = proteinTrackingService;
+        }
+
         //
         // GET: /ProteinTracker/
 

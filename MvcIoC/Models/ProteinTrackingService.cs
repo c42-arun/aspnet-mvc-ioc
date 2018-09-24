@@ -2,7 +2,7 @@
 
 namespace MvcIoC.Models
 {
-    public class ProteinTrackingService
+    public class ProteinTrackingService : IProteinTrackingService
     {
         private ProteinRepository repository = new ProteinRepository();
 
