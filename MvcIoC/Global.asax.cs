@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvcIoC.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -23,6 +24,9 @@ namespace MvcIoC
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+
+            var factory = new CustomControllerFactory();
+            ControllerBuilder.Current.SetControllerFactory(factory);
         }
     }
 }
