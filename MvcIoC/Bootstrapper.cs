@@ -31,8 +31,13 @@ namespace MvcIoC
 
     public static void RegisterTypes(IUnityContainer container)
     {
-        container.RegisterType<IProteinTrackingService, ProteinTrackingService>();
-        container.RegisterType<IProteinRepository, ProteinRepository>();
-    }
+            container.RegisterTypes(
+                AllClasses.FromLoadedAssemblies(),
+                WithMappings.FromMatchingInterface,
+                WithName.Default);
+
+        //container.RegisterType<IProteinTrackingService, ProteinTrackingService>();
+        //container.RegisterType<IProteinRepository, ProteinRepository>();
+        }
   }
 }
