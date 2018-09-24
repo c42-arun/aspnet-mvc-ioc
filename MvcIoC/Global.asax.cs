@@ -17,6 +17,9 @@ namespace MvcIoC
     {
         protected void Application_Start()
         {
+            // Registers services with Unity 
+            Bootstrapper.Initialise();
+
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
@@ -24,8 +27,7 @@ namespace MvcIoC
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
-
-            Bootstrapper.Initialise();
+            
             //var factory = new CustomControllerFactory();
             //ControllerBuilder.Current.SetControllerFactory(factory);
         }
