@@ -199,6 +199,9 @@
     <Compile Include="Models\ProteinData.cs" />
     <Compile Include="Models\ProteinRepository.cs" />
     <Compile Include="Models\ProteinTrackingService.cs" />
+    <Compile Include="Models\AnalyticsService.cs" />
+    <Compile Include="Models\IAnalyticsService.cs" />
+    <Compile Include="Pages\ProteinTrackerBasePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
